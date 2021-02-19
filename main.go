@@ -130,7 +130,7 @@ Option:
 
 	var d, s uint
 	flag.UintVar(&d, "d", 514, "Specify the destination port")
-	flag.UintVar(&s, "s", 514, "Specify the source address")
+	flag.UintVar(&s, "s", 514, "Specify the source port")
 	flag.BoolVar(&isConvert, "c", false, "Convert syslog's timestamp to the current timestamp")
 	flag.StringVar(&format, "f", "rfc3164", "Specify the syslog format")
 	flag.Parse()

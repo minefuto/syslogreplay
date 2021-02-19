@@ -22,7 +22,7 @@ Option:
   -f string
         Specify the syslog format (default "rfc3164")
   -s uint
-        Specify the source address (default 514)
+        Specify the source port (default 514)
 
 Format:
   rfc3164        : Jan _2 15:04:05
