@@ -32,11 +32,11 @@ const (
 	rfc5424Layout = time.RFC3339
 	rfc5424Regexp = `\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(Z|-\d\d:\d\d|\+\d\d:\d\d)`
 
-	rfc5424TenMiliLayout = "2006-01-02T15:04:05.00Z07:00"
-	rfc5424TenMiliRegexp = `\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d(Z|-\d\d:\d\d|\+\d\d:\d\d)`
+	rfc5424TenMilliLayout = "2006-01-02T15:04:05.00Z07:00"
+	rfc5424TenMilliRegexp = `\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d(Z|-\d\d:\d\d|\+\d\d:\d\d)`
 
-	rfc5424MiliLayout = "2006-01-02T15:04:05.000Z07:00"
-	rfc5424MiliRegexp = `\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d(Z|-\d\d:\d\d|\+\d\d:\d\d)`
+	rfc5424MilliLayout = "2006-01-02T15:04:05.000Z07:00"
+	rfc5424MilliRegexp = `\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d(Z|-\d\d:\d\d|\+\d\d:\d\d)`
 
 	rfc5424MicroLayout = "2006-01-02T15:04:05.000000Z07:00"
 	rfc5424MicroRegexp = `\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d(Z|-\d\d:\d\d|\+\d\d:\d\d)`
@@ -44,11 +44,11 @@ const (
 
 const formatList = `
 Format:
-  rfc3164        : Jan _2 15:04:05
-  rfc5424        : 2006-01-02T15:04:05Z07:00
-  rfc5424TenMili : 2006-01-02T15:04:05.00Z07:00
-  rfc5424Mili    : 2006-01-02T15:04:05.000Z07:00
-  rfc5424Micro   : 2006-01-02T15:04:05.000000Z07:00
+  rfc3164         : Jan _2 15:04:05
+  rfc5424         : 2006-01-02T15:04:05Z07:00
+  rfc5424TenMilli : 2006-01-02T15:04:05.00Z07:00
+  rfc5424Milli    : 2006-01-02T15:04:05.000Z07:00
+  rfc5424Micro    : 2006-01-02T15:04:05.000000Z07:00
 `
 
 func selectFormat(name string) (string, string, error) {
@@ -57,10 +57,10 @@ func selectFormat(name string) (string, string, error) {
 		return rfc3164Layout, rfc3164Regexp, nil
 	case "rfc5424":
 		return rfc5424Layout, rfc5424Regexp, nil
-	case "rfc5424TenMili":
-		return rfc5424TenMiliLayout, rfc5424TenMiliRegexp, nil
-	case "rfc5424Mili":
-		return rfc5424MiliLayout, rfc5424MiliRegexp, nil
+	case "rfc5424TenMilli":
+		return rfc5424TenMilliLayout, rfc5424TenMilliRegexp, nil
+	case "rfc5424Milli":
+		return rfc5424MilliLayout, rfc5424MilliRegexp, nil
 	case "rfc5424Micro":
 		return rfc5424MicroLayout, rfc5424MicroRegexp, nil
 	default:
