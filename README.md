@@ -40,10 +40,9 @@ Format:
 
 ## Installation
 ```
-$ git clone https://github.com/minefuto/syslogreplay.git
-$ cd syslogreplay
-$ go install
+go install github.com/minefuto/syslogreplay@latest
 ```
+Required: gcc, libpcap
 
 ## Supported OS
 Linux
